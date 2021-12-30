@@ -21,15 +21,10 @@ export default function Home({ allPostsData }) {
 				<title>{siteTitle}</title>
 			</Head>
 			<section className={utilStyles.headingMd}>
-				<p>
-					Hello again. I'm not very good at git and i've never really understood
-					the pull request thing. However, I'm Rhys. I'm a chemical engineer
-					from Huddersfield and I'm working on this NextJS project.
-				</p>
-				<p>
-					(BLah blah blah sample website - you’ll be building a site like this
-					on <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-				</p>
+
+				<p>This is a whole new paragraph to think about.</p>
+
+
 			</section>
 			<section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
 				<h2 className={utilStyles.headingLg}>Blog</h2>
