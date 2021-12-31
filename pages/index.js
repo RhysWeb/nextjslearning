@@ -20,6 +20,37 @@ export default function Home({ allPostsData }) {
 			<Head>
 				<title>{siteTitle}</title>
 			</Head>
+			<section className="text-xl pt-3">
+				<p>
+					This is a whole new paragraph to think about. I've changed the github
+					remote name and possibly fucked this (Temporarily)
+				</p>
+			</section>
+			<section>
+				<h2 className="text-2xl py-5">Blog</h2>
+				<ul className="">
+					{allPostsData.map(({ id, date, title }) => (
+						<li className="pb-5" key={id}>
+							<Link href={`/posts/${id}`}>
+								<a className="text-blue-500 hover:underline">{title}</a>
+							</Link>
+							<br />
+							<small>
+								<Date dateString={date} />
+							</small>
+						</li>
+					))}
+				</ul>
+			</section>
+		</Layout>
+	);
+}
+
+{
+	/* <Layout home>
+			<Head>
+				<title>{siteTitle}</title>
+			</Head>
 			<section className={utilStyles.headingMd}>
 				<p>
 					This is a whole new paragraph to think about. I've changed the github
@@ -42,6 +73,5 @@ export default function Home({ allPostsData }) {
 					))}
 				</ul>
 			</section>
-		</Layout>
-	);
+		</Layout> */
 }
