@@ -1,4 +1,4 @@
-import prisma from '../../lib/prisma';
+import prisma from '../../backend/utils/prisma';
 
 // Note that the pscale database is called 'teachers'
 // So if you want to connect to it from the Command Line you use:
