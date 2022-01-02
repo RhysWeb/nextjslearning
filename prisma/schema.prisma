@@ -21,4 +21,5 @@ model Teacher {
   updatedAt DateTime @updatedAt
   name     String   @db.VarChar(255)
   email   String   @unique
+  age   Int  
 }
