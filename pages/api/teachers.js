@@ -1,5 +1,12 @@
 import prisma from '../../lib/prisma';
 
+// Note that the pscale database is called 'teachers'
+// So if you want to connect to it from the Command Line you use:
+// pscale connect teachers main --port 3309
+
+// You can then manually add entries to it from Bash with:
+// npx prisma studio
+
 export default async function assetHandler(req, res) {
 	const { method } = req;
 
