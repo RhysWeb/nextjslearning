@@ -20,6 +20,12 @@ export default async function assetHandler(req, res) {
 				res.status(500).json({ error: 'Error fetching teachers' });
 			}
 			break;
+		case 'POST':
+			try {
+				console.log('placeholder');
+			} catch (e) {
+				console.log('placeholder');
+			}
 		default:
 			res.setHeader('Allow', ['GET']);
 			res.status(405).end(`Method ${method} Not Allowed`);
