@@ -7,14 +7,18 @@ import { getSortedPostsData } from '../lib/posts';
 
 export async function getStaticProps() {
 	const allPostsData = getSortedPostsData();
+	const teachers = await fetch(
+		'https://teacherproject-pzir1m9qi-rhysweb.vercel.app/api/teachers'
+	).then((res) => res.json());
 	return {
 		props: {
 			allPostsData,
+			teachers,
 		},
 	};
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({ allPostsData, teachers }) {
 	return (
 		<Layout home>
 			<Head>
@@ -22,6 +26,7 @@ export default function Home({ allPostsData }) {
 			</Head>
 			<section className="text-xl pt-3">
 				<p>NextJS Website to learn how to use it. Changes made on 23/01/22.</p>
+				<pre>{JSON.stringify(teachers)}</pre>
 			</section>
 			<section>
 				<h2 className="text-2xl py-5">Blog</h2>

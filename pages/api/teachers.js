@@ -22,7 +22,8 @@ export default async function assetHandler(req, res) {
 			break;
 		case 'POST':
 			try {
-				console.log('placeholder');
+				const teachers = await prisma.teacher.findMany();
+				res.status(200).json(teachers);
 			} catch (e) {
 				console.log('placeholder');
 			}
